@@ -94,15 +94,29 @@ public class TerminalView extends View implements VDUDisplay {
 		setFocusableInTouchMode(true);
 		init();
 	}
+	
+	public void setScreenSize(int paramInt1, int paramInt2)
+	{
+		Log.d("rterm.view", "setScreenSize (" + paramInt1 + "," + paramInt2 + ")");
+		this.bitmap = Bitmap.createBitmap(paramInt1, paramInt2, Bitmap.Config.ARGB_8888);
+		this.canvas.setBitmap(this.bitmap);
+		this.defaultPaint.setColor(-16777216);
+		this.canvas.drawRect(0.0F, 0.0F, paramInt1, paramInt2, this.defaultPaint);
+		this.CHAR_WIDTH = (paramInt1 / 80.0F);
+		this.CHAR_HEIGHT = (paramInt2 / 24.0F);
+		Log.d("rterm.view", "CHAR_WIDTH/CHAR_HEIGHT (" + this.CHAR_HEIGHT + "," + this.CHAR_HEIGHT + ")");
+		this.defaultPaint.setTextSize(this.CHAR_HEIGHT);
+		this.defaultPaint.setTextScaleX(this.CHAR_WIDTH * 2.0F / this.CHAR_HEIGHT);
+		this.fullRedraw = true;
+		redraw();
+		postInvalidate();
+	}
 
 	public void init() {
 		resetColors();
 
-		File fontfile = new File(Environment.getExternalStorageDirectory(), "rterm/rterm.ttf");
-		if (fontfile.exists())
-			defaultPaint.setTypeface(Typeface.createFromFile(fontfile));
-		else
-			defaultPaint.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/rterm.ttf"));
+		Typeface localTypeface = Typeface.createFromAsset(getResources().getAssets(), "LiberationMono-Regular.ttf");
+		defaultPaint.setTypeface(localTypeface);
 
 		defaultPaint.setAntiAlias(true);
 		defaultPaint.setColor(Color.BLACK);
@@ -158,6 +172,16 @@ public class TerminalView extends View implements VDUDisplay {
 
 		// Workaround to create array of ArrayList generic type.
 		urls = (ArrayList<Url>[]) Array.newInstance(ArrayList.class, TERM_HEIGHT);
+	}
+
+	protected void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+	{
+		super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
+		Log.d("rterm.view", "onSizeChanged (" + paramInt1 + "," + paramInt2 + ")");
+		this.SCREEN_WIDTH = paramInt1;
+		this.SCREEN_HEIGHT = paramInt2;
+		if (paramInt3 == 0)
+			setScreenSize(paramInt1, paramInt2);
 	}
 
 	@Override
