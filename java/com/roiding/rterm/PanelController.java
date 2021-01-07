@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-public class PanelControler {
+public class PanelController {
   private Animation fadeIn;
   
   private Animation fadeOut;
@@ -22,16 +22,16 @@ public class PanelControler {
   
   Handler mHandler = new Handler() {
       public void handleMessage(Message param1Message) {
-        if (System.currentTimeMillis() - PanelControler.this.lastPressTime >= 1500L) {
-          PanelControler.this.viewGroup.startAnimation(PanelControler.this.fadeOut);
-          PanelControler.this.isLight = false;
+        if (System.currentTimeMillis() - PanelController.this.lastPressTime >= 1500L) {
+          PanelController.this.viewGroup.startAnimation(PanelController.this.fadeOut);
+          PanelController.this.isLight = false;
         } 
       }
     };
   
   private ViewGroup viewGroup;
   
-  public PanelControler(Context paramContext, ViewGroup paramViewGroup) {
+  public PanelController(Context paramContext, ViewGroup paramViewGroup) {
     this.mContext = paramContext;
     this.fadeIn = AnimationUtils.loadAnimation(this.mContext, R.anim.fade_in);
     this.fadeOut = AnimationUtils.loadAnimation(this.mContext, R.anim.fade_out);
@@ -40,17 +40,17 @@ public class PanelControler {
     this.viewGroup = paramViewGroup;
     View.OnTouchListener onTouchListener = new View.OnTouchListener() {
         public boolean onTouch(View param1View, MotionEvent param1MotionEvent) {
-          System.out.println("onTouch:" + param1MotionEvent.getAction() + "," + PanelControler.this.isLight);
-          PanelControler.this.lastPressTime = System.currentTimeMillis();
+          System.out.println("onTouch:" + param1MotionEvent.getAction() + "," + PanelController.this.isLight);
+          PanelController.this.lastPressTime = System.currentTimeMillis();
           if (param1MotionEvent.getAction() == 0) {
-            if (!PanelControler.this.isLight) {
-              PanelControler.this.viewGroup.startAnimation(PanelControler.this.fadeIn);
-              PanelControler.this.isLight = true;
+            if (!PanelController.this.isLight) {
+              PanelController.this.viewGroup.startAnimation(PanelController.this.fadeIn);
+              PanelController.this.isLight = true;
             } 
             return param1View.onTouchEvent(param1MotionEvent);
           } 
           if (param1MotionEvent.getAction() == 1)
-            PanelControler.this.mHandler.sendEmptyMessageDelayed(1, 1600L); 
+            PanelController.this.mHandler.sendEmptyMessageDelayed(1, 1600L);
           return param1View.onTouchEvent(param1MotionEvent);
         }
       };

@@ -71,7 +71,7 @@ public class TerminalActivity extends Activity {
 	private View btn_up_ext;
 	private Animation slideIn;
 	private Animation slideOut;
-	PanelControler controller;
+	PanelController controller;
 
 	
 	class Gesture {
@@ -121,7 +121,7 @@ public class TerminalActivity extends Activity {
 		ViewGroup vc = (ViewGroup)findViewById(R.id.v_ctrl);
 		System.out.println("v_control=" + vc);
 
-		this.controller = new PanelControler(this, vc);
+		this.controller = new PanelController(this, vc);
 
 		this.m_wake_lock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK|PowerManager.ON_AFTER_RELEASE, "rTerm");
 		this.m_wake_lock.acquire();
