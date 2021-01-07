@@ -47,8 +47,8 @@
         <item>^p</item>
         <item>^x</item>
         <item>^a</item>
-        <item>c</item>
-        <item>p</item>
+        <item>^d</item>
+        <item>menu</item>
         <item>=</item>
     </string-array>
     <string-array name="function_buttons_desc">
@@ -56,8 +56,8 @@
         <item>^p</item>
         <item>^x</item>
         <item>^a</item>
-        <item>c</item>
-        <item>p</item>
+        <item>^d</item>
+        <item>Menu</item>
         <item>=</item>
     </string-array>
 </resources>

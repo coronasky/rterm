@@ -226,6 +226,12 @@ public class TerminalActivity extends Activity {
 				Toast.makeText(TerminalActivity.this, v, Toast.LENGTH_SHORT)
 						.show();
 
+				// handle special chars "menu"
+				// because menu button is deprecated in newer versions
+				if (k.equals("menu")) {
+					openOptionsMenu();
+					return;
+				}
 				boolean controlPressed = false;
 				for (char c : k.toCharArray()) {
 					if (c == '^') {
