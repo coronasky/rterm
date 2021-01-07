@@ -562,7 +562,7 @@ public class TerminalView extends View implements VDUDisplay {
 								char url_char = buffer.getChar(c + addr, l);
 								if (Character.isLetterOrDigit(url_char)) {
 									addr++;
-								} else if ("./@?&=-_;%#!~".contains(Character.toString(url_char))) {
+								} else if ("./@?&=-_;%#!~+".contains(Character.toString(url_char))) {
 									addr++;
 								} else {
 									break;
