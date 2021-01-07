@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@android:id/content" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:ellipsize="end" android:id="@id/tv_hostName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主机名称" android:singleLine="true" />
+    <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/tv_hostAddress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="telnet://www.lilacbbs.com:23" android:layout_below="@id/tv_hostName" />
+    <TextView android:textSize="8.0dip" android:id="@id/tv_hostEncoding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="GBK" android:layout_toRightOf="@id/tv_hostName" />
+    <TextView android:textSize="8.0dip" android:id="@id/tv_hostSsh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="SSH" android:layout_toRightOf="@id/tv_hostEncoding" />
+    <TextView android:textSize="8.0dip" android:typeface="serif" android:id="@id/tv_hostAutoLogin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="2.0dip" android:text="AUTO-LOGIN" android:layout_toRightOf="@id/tv_hostSsh" />
+    <ImageView android:id="@id/iv_icon" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/host_online" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

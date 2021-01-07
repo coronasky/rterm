@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="btn_up" />
+    <item type="id" name="btn_up_expend" />
+    <item type="id" name="btn_down" />
+    <item type="id" name="btn_left" />
+    <item type="id" name="btn_left_expend" />
+    <item type="id" name="btn_right" />
+    <item type="id" name="btn_center" />
+    <item type="id" name="iv_icon" />
+    <item type="id" name="tv_hostName" />
+    <item type="id" name="tv_hostAddress" />
+    <item type="id" name="tv_hostAutoLogin" />
+    <item type="id" name="tv_hostSsh" />
+    <item type="id" name="tv_hostEncoding" />
+    <item type="id" name="et_hostUser" />
+    <item type="id" name="et_hostPass" />
+    <item type="id" name="ck_remember" />
+    <item type="id" name="tv_prompt" />
+    <item type="id" name="v_direction" />
+    <item type="id" name="view_webview" />
+    <item type="id" name="text" />
+    <item type="id" name="terminal_flipper" />
+    <item type="id" name="gestureView" />
+    <item type="id" name="locale" />
+    <item type="id" name="options" />
+    <item type="id" name="locale_en" />
+    <item type="id" name="locale_zh_rCN" />
+    <item type="id" name="locale_zh_rTW" />
+    <item type="id" name="v_ctrl" />
+    <item type="id" name="functionKeyGallery" />
+</resources>

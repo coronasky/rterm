@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RadioGroup android:orientation="vertical" android:id="@id/options" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <RadioButton android:id="@id/locale_en" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/locale_en" />
+            <RadioButton android:id="@id/locale_zh_rCN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/locale_zh_cn" />
+            <RadioButton android:id="@id/locale_zh_rTW" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/locale_zh_tw" />
+        </RadioGroup>
+    </ScrollView>
+</LinearLayout>

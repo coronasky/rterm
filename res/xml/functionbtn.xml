@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:singleLine="true" android:title="@string/editfunctionbtn_name" android:key="name" android:summary="@string/editfunctionbtn_name_summary" />
+    <EditTextPreference android:singleLine="false" android:title="@string/editfunctionbtn_keys" android:key="keys" android:summary="@string/editfunctionbtn_keys_summary" />
+    <EditTextPreference android:singleLine="true" android:title="@string/editfunctionbtn_sortnumber" android:key="sortnumber" android:summary="@string/editfunctionbtn_sortnumber_summary" />
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/v_ctrl" android:layout_width="200.0dip" android:layout_height="140.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/btn_up" android:background="@drawable/btn_control_up" android:layout_width="160.0dip" android:layout_height="43.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/btn_down" android:background="@drawable/btn_control_down" android:layout_width="160.0dip" android:layout_height="43.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <ImageButton android:id="@id/btn_left" android:background="@drawable/btn_control_left" android:layout_width="54.0dip" android:layout_height="72.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/btn_right" android:background="@drawable/btn_control_right" android:layout_width="54.0dip" android:layout_height="72.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/btn_center" android:background="@drawable/btn_control_center" android:layout_width="120.0dip" android:layout_height="54.0dip" android:layout_centerInParent="true" />
+        <ToggleButton android:id="@id/btn_left_expend" android:background="@drawable/btn_control_left_ext" android:layout_width="53.0dip" android:layout_height="34.0dip" android:layout_marginLeft="4.0dip" android:textOn="" android:textOff="" android:layout_alignParentBottom="true" />
+        <ToggleButton android:id="@id/btn_up_expend" android:background="@drawable/btn_control_expend_up" android:layout_width="53.0dip" android:layout_height="32.0dip" android:layout_marginRight="4.0dip" android:textOn="" android:textOff="" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.roiding.rterm.ButtonGallery android:gravity="left" android:id="@id/functionKeyGallery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spacing="0.0dip" android:layout_toLeftOf="@id/v_ctrl" android:layout_alignParentBottom="true" />
+</RelativeLayout>

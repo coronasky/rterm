@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewFlipper android:id="@id/terminal_flipper" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.roiding.rterm.GestureView android:id="@id/gestureView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <include layout="@layout/view_control" />
+</RelativeLayout>
