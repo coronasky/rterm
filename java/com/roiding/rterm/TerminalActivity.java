@@ -216,7 +216,8 @@ public class TerminalActivity extends Activity {
 			functionKeyGallery.setAdapter(new FunctionButtonAdapter(this));
 		}
 		functionKeyGallery.setBackgroundColor(Color.alpha(0));
-		functionKeyGallery.setSelection(functionBtnList.size() / 2);
+		// initial position of function buttons -> to the right
+		functionKeyGallery.setSelection(0);  // center: functionBtnList.size() / 2
 		functionKeyGallery.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {

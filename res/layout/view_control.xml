@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/v_ctrl" android:layout_width="200.0dip" android:layout_height="140.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
-        <ImageButton android:id="@id/btn_up" android:background="@drawable/btn_control_up" android:layout_width="160.0dip" android:layout_height="43.0dip" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-        <ImageButton android:id="@id/btn_down" android:background="@drawable/btn_control_down" android:layout_width="160.0dip" android:layout_height="43.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
-        <ImageButton android:id="@id/btn_left" android:background="@drawable/btn_control_left" android:layout_width="54.0dip" android:layout_height="72.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-        <ImageButton android:id="@id/btn_right" android:background="@drawable/btn_control_right" android:layout_width="54.0dip" android:layout_height="72.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-        <ImageButton android:id="@id/btn_center" android:background="@drawable/btn_control_center" android:layout_width="120.0dip" android:layout_height="54.0dip" android:layout_centerInParent="true" />
-        <ToggleButton android:id="@id/btn_left_expend" android:background="@drawable/btn_control_left_ext" android:layout_width="53.0dip" android:layout_height="34.0dip" android:layout_marginLeft="4.0dip" android:textOn="" android:textOff="" android:layout_alignParentBottom="true" />
-        <ToggleButton android:id="@id/btn_up_expend" android:background="@drawable/btn_control_expend_up" android:layout_width="53.0dip" android:layout_height="32.0dip" android:layout_marginRight="4.0dip" android:textOn="" android:textOff="" android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:id="@id/v_ctrl"
+        android:layout_width="214dp"
+        android:layout_height="163dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="9dp">
+
+        <ImageButton
+            android:id="@id/btn_up"
+            android:layout_width="199dp"
+            android:layout_height="56dp"
+            android:layout_above="@+id/btn_center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/btn_control_up" />
+
+        <ImageButton
+            android:id="@id/btn_down"
+            android:layout_width="192dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/btn_control_down" />
+
+        <ImageButton
+            android:id="@id/btn_left"
+            android:layout_width="61dp"
+            android:layout_height="81dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_control_left" />
+
+        <ImageButton
+            android:id="@id/btn_right"
+            android:layout_width="62dp"
+            android:layout_height="82dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_control_right" />
+
+        <ImageButton
+            android:id="@id/btn_center"
+            android:layout_width="120.0dip"
+            android:layout_height="54.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_control_center" />
+
+        <ToggleButton
+            android:id="@id/btn_left_expend"
+            android:layout_width="57dp"
+            android:layout_height="41dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4.0dip"
+            android:background="@drawable/btn_control_left_ext"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@id/btn_up_expend"
+            android:layout_width="53dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4.0dip"
+            android:background="@drawable/btn_control_expend_up"
+            android:textOff=""
+            android:textOn="" />
     </RelativeLayout>
+
     <com.roiding.rterm.ButtonGallery android:gravity="left" android:id="@id/functionKeyGallery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spacing="0.0dip" android:layout_toLeftOf="@id/v_ctrl" android:layout_alignParentBottom="true" />
 </RelativeLayout>
