@@ -217,7 +217,7 @@ public class TerminalActivity extends Activity {
 		}
 		functionKeyGallery.setBackgroundColor(Color.alpha(0));
 		// fill some space between buttons
-		functionKeyGallery.setSpacing(20);
+		functionKeyGallery.setSpacing(15);
 		// initial position of function buttons -> to the right
 		functionKeyGallery.setSelection(0);  // center: functionBtnList.size() / 2
 		functionKeyGallery.setOnItemClickListener(new OnItemClickListener() {
