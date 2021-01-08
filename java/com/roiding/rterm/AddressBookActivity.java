@@ -148,15 +148,6 @@ public class AddressBookActivity extends ListActivity {
 		h2.setHost("newsmth.net");
 		h2.setPort(23);
 		dbUtils.hostDelegate.insert(h2);
-
-		Host h3 = new Host();
-		h3.setName(getText(R.string.addressbook_site_lqqm).toString());
-		h3.setProtocal("Telnet");
-		h3.setEncoding("GBK");
-		h3.setHost("lqqm.net");
-		h3.setPort(23);
-		dbUtils.hostDelegate.insert(h3);
-
 	}
 
 	/*
