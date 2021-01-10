@@ -74,5 +74,10 @@
             android:textOn="" />
     </RelativeLayout>
 
-    <com.roiding.rterm.ButtonGallery android:gravity="left" android:id="@id/functionKeyGallery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spacing="0.0dip" android:layout_toLeftOf="@id/v_ctrl" android:layout_alignParentBottom="true" />
+    <com.roiding.rterm.ButtonGallery android:gravity="right"
+        android:id="@id/functionKeyGallery" android:visibility="gone"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:spacing="0.0dip" android:layout_toLeftOf="@id/v_ctrl"
+        android:layout_alignParentBottom="true"
+        />
 </RelativeLayout>

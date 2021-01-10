@@ -22,6 +22,7 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -39,6 +40,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Gallery;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.ViewFlipper;
@@ -217,9 +219,9 @@ public class TerminalActivity extends Activity {
 		}
 		functionKeyGallery.setBackgroundColor(Color.alpha(0));
 		// fill some space between buttons
-		functionKeyGallery.setSpacing(15);
+		functionKeyGallery.setSpacing(0);
 		// initial position of function buttons -> to the right
-		functionKeyGallery.setSelection(0);  // center: functionBtnList.size() / 2
+		functionKeyGallery.setSelection(1);  // center: functionBtnList.size() / 2
 		functionKeyGallery.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -368,6 +370,11 @@ public class TerminalActivity extends Activity {
 			Button btn = new Button(mContext);
 			btn.setText(functionBtnList.get(position).getName());
 			btn.setClickable(false);
+			Gallery.LayoutParams params = new Gallery.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+					ViewGroup.LayoutParams.MATCH_PARENT);
+			int pixels =  (int)(50 * mContext.getResources().getDisplayMetrics().density);
+			params.width = pixels;
+			btn.setLayoutParams(params);
 			return btn;
 		}
 
