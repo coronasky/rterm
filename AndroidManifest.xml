@@ -12,6 +12,11 @@
         <activity android:name=".FunctionButtonActivity"/>
         <activity android:name=".EditFunctionButtonActivity"/>
         <activity android:label="@string/addressbook_help" android:name=".HelpActivity"/>
+        <activity android:name=".WebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
     <uses-permission android:name="android.permission.INTERNET"/>

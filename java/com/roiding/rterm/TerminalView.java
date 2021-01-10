@@ -6,7 +6,9 @@ import java.lang.reflect.Array;
 import java.net.SocketException;
 import java.util.ArrayList;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -21,6 +23,7 @@ import android.util.AttributeSet;
 import android.util.FloatMath;
 import android.util.Log;
 import android.util.DisplayMetrics;
+import android.webkit.WebView;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -82,6 +85,7 @@ public class TerminalView extends View implements VDUDisplay {
 	private boolean altPressed;
 	private boolean shiftPressed;
 
+	private Context context;
 	public Wrapper connection;
 	public TerminalActivity terminalActivity;
 	public Host host;
@@ -90,6 +94,7 @@ public class TerminalView extends View implements VDUDisplay {
 			TerminalActivity terminalActivity) {
 		super(context, attrs);
 
+		this.context = context;
 		this.terminalActivity = terminalActivity;
 		setFocusable(true);
 		setFocusableInTouchMode(true);
@@ -298,10 +303,15 @@ public class TerminalView extends View implements VDUDisplay {
 //			break;
 			if (urls[l] != null) {
 				for (Url url : urls[l]) {
-					if (url.pointIn(w, l))
-						terminalActivity.showUrlDialog(url.url.trim());
+					if (url.pointIn(w, l)) {
+						// terminalActivity.showUrlDialog(url.url.trim());
+
+						Intent intent = new Intent(this.getContext(), WebViewActivity.class);
+						intent.putExtra("URL", url.url.trim());
+						((Activity)this.getContext()).startActivity(intent);
 					}
 				}
+			}
 			Log.d(TAG, "onTouchEvent:" + y + "/" + CHAR_HEIGHT + "=" + l);
 			return true;
 
