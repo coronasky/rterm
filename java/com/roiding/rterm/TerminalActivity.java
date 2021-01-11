@@ -220,7 +220,7 @@ public class TerminalActivity extends Activity {
 		// functionKeyGallery.setBackgroundColor(Color.BLACK);
 		// functionKeyGallery.getBackground().setAlpha(255);
 		// fill some space between buttons
-		functionKeyGallery.setSpacing(10);
+		functionKeyGallery.setSpacing(15);
 		// initial position of function buttons -> to the right
 		functionKeyGallery.setSelection(functionBtnList.size() / 3);  // center: functionBtnList.size() / 2
 		functionKeyGallery.setOnItemClickListener(new OnItemClickListener() {
@@ -376,9 +376,9 @@ public class TerminalActivity extends Activity {
 			int pixels =  (int)(50 * mContext.getResources().getDisplayMetrics().density);
 			params.width = pixels;
 			btn.setLayoutParams(params);
-			// btn.setTextColor(Color.YELLOW);
+			btn.setTextColor(Color.BLACK);
 			btn.setBackgroundColor(Color.WHITE);
-			btn.getBackground().setAlpha(96);
+			btn.getBackground().setAlpha(192);
 			return btn;
 		}
 
