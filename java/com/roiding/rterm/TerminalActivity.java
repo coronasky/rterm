@@ -217,11 +217,12 @@ public class TerminalActivity extends Activity {
 		if (functionBtnList.size() > 0) {
 			functionKeyGallery.setAdapter(new FunctionButtonAdapter(this));
 		}
-		functionKeyGallery.setBackgroundColor(Color.alpha(0));
+		// functionKeyGallery.setBackgroundColor(Color.BLACK);
+		// functionKeyGallery.getBackground().setAlpha(255);
 		// fill some space between buttons
-		functionKeyGallery.setSpacing(0);
+		functionKeyGallery.setSpacing(10);
 		// initial position of function buttons -> to the right
-		functionKeyGallery.setSelection(1);  // center: functionBtnList.size() / 2
+		functionKeyGallery.setSelection(functionBtnList.size() / 3);  // center: functionBtnList.size() / 2
 		functionKeyGallery.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -375,6 +376,9 @@ public class TerminalActivity extends Activity {
 			int pixels =  (int)(50 * mContext.getResources().getDisplayMetrics().density);
 			params.width = pixels;
 			btn.setLayoutParams(params);
+			// btn.setTextColor(Color.YELLOW);
+			btn.setBackgroundColor(Color.WHITE);
+			btn.getBackground().setAlpha(96);
 			return btn;
 		}
 

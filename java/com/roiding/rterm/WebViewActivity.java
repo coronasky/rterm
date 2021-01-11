@@ -22,7 +22,6 @@ public class WebViewActivity extends Activity {
         webView = (WebView) findViewById(R.id.webView);
         webView.setWebViewClient(new MyBrowser());
         webView.setWebChromeClient(new WebChromeClient());
-        // webView.SetWebChromeClient(new WebChromeClient ());
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);

@@ -9,4 +9,9 @@
         <item name="android:layout_height">60.0px</item>
         <item name="android:layout_weight">2.0</item>
     </style>
+    <style name="CustomTheme">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
 </resources>

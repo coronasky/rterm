@@ -3,6 +3,7 @@ package com.roiding.rterm;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
