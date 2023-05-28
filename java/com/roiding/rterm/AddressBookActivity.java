@@ -152,7 +152,7 @@ public class AddressBookActivity extends ListActivity {
 		h2.setName(getText(R.string.addressbook_site_newsmth).toString());
 		h2.setProtocal("Telnet");
 		h2.setEncoding("GBK");
-		h2.setHost("newsmth.net");
+		h2.setHost("mysmth.net");
 		h2.setPort(23);
 		dbUtils.hostDelegate.insert(h2);
 	}

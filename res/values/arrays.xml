@@ -43,21 +43,23 @@
         <item>Input Helper</item>
     </string-array>
     <string-array name="function_buttons_key">
-        <item>H</item>
-        <item>^p</item>
         <item>^x</item>
+        <item>b1</item>
         <item>^a</item>
+        <item>^p</item>
         <item>^d</item>
         <item>menu</item>
+        <item>H</item>
         <item>=</item>
     </string-array>
     <string-array name="function_buttons_desc">
-        <item>H</item>
-        <item>^p</item>
         <item>^x</item>
+        <item>b1</item>
         <item>^a</item>
+        <item>^p</item>
         <item>^d</item>
         <item>M</item>
+        <item>H</item>
         <item>=</item>
     </string-array>
 </resources>
